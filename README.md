@@ -25,3 +25,28 @@ pyfirmata의 아두이노 모듈을 사용하기 위해 import함
 **d or a** : The type of the pin \
 **pin number** : The number of the pin\
 **i or o** : The mode of the pin
+
+  ``` it = util.Iterator(board) ```\
+보드의 입력값을 지속적으로 업데이트해주는 iterator 변수 선언
+
+ ``` it.start()``` \
+iterator 시작
+
+``` analog_value = analog_input.read() ```\
+Temperature와 연결된 0번핀의 입력을 읽어와서 변수 analog_value에 저장
+```
+for i in range(1):
+  if analog_value is None:
+    time.sleep(0.1)
+    break
+  if analog_value < 0.05:
+    buzzer.write(0)
+    time.sleep(0.1)
+  if analog_value > 0.05:
+    buzzer.write(1)
+    buzzer.write(0)
+    time.sleep(0.1)
+```
+analog_value값이 None이면 0.1초 지연시킨후 for문을 빠져나옴\
+analog_value값이 0.05보다 작으면 buzzer의 소리를 off하도록 0을 입력으로 줌\
+analog_value값이 0.05보다 크면 buzzer의 소리를 on하도록 1을 입력으로 줌\
