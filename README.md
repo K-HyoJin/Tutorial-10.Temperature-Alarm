@@ -1,6 +1,6 @@
 # Arduino example 10
 Tutorial 10.Temperature Alarm\
-출력되는 온도값이 0.05 이상이면 부저에서 소리가 출력되도록 제작
+온도값을 측정하고  0.05 이상이면 부저에서 소리가 출력되도록 제작
 
 ## circuit
 Temperature Sensor : analog 0pin\
