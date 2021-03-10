@@ -50,3 +50,4 @@ for i in range(1):
 analog_value값이 None이면 0.1초 지연시킨후 for문을 빠져나옴\
 analog_value값이 0.05보다 작으면 buzzer의 소리를 off하도록 0을 입력으로 줌\
 analog_value값이 0.05보다 크면 buzzer의 소리를 on하도록 1을 입력으로 줌
+
